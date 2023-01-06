@@ -1,0 +1,15 @@
+current directory: /Users/fujitahiroshishin/environment/games/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/fujitahiroshishin/.rbenv/versions/3.1.3/bin/ruby -I /Users/fujitahiroshishin/.rbenv/versions/3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/fujitahiroshishin/environment/games/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230106-63935-inulh6 sitelibdir\=./.gem.20230106-63935-inulh6 clean
+
+current directory: /Users/fujitahiroshishin/environment/games/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230106-63935-inulh6 sitelibdir\=./.gem.20230106-63935-inulh6
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/fujitahiroshishin/environment/games/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230106-63935-inulh6 sitelibdir\=./.gem.20230106-63935-inulh6 install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230106-63935-inulh6
