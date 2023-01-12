@@ -263,6 +263,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  bcrypt
   bootsnap (>= 1.4.4)
   bootstrap-sass
   byebug
