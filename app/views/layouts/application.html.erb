@@ -15,6 +15,33 @@
    <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
   <% end %>
 
+ <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+          <%= link_to 'Home', root_path,class: 'navbar-brand' %>
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li>
+             <%= link_to 'Home', root_path, class: 'navi' %>
+            </li>
+            <li>
+               <%= link_to 'Home', root_path, class: 'navi' %>
+            </li>
+            <li>
+            <%= button_to 'Logout', logout_path, method: :delete, class: 'navibutton'  %>
+            </li>
+          <% else %>  
+            <li>
+              <%= link_to 'Home', root_path, class: 'navi' %>
+            </li>
+            <li>
+                <%= link_to 'Home', root_path, class: 'navi' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+
     <%= yield %>
     <script>
   $(function(){
