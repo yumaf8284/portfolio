@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   get 'pages/help'
 
   resources :topics
+
+  get 'comments/new'
+  post '/comments', to: 'comments#create'
+
 end
