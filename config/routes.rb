@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'topics/new'
   get 'sessions/new'
   get 'users/new'
   get 'pages/index'
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
 
+  resources :topics
 end
