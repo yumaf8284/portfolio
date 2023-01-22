@@ -7,19 +7,29 @@
             <h2 class="topic-author">
               <%= topic.title %>
             </h2>
-            <h5 class="topic-text">
+            <h4 class="topic-text">
               <%= topic.user.name %>
-            </h5>
+            </h4>
             <p class="topic-text">
               <%= topic.body %>
             </p>
             <%= link_to comments_new_path(topic_id: topic.id) do %>
              <%= image_tag 'comment.png', class: 'topic-index-icon' %>
+             <%= topic.comment_users.count %>
             <% end %>
              <% if logged_in? && current_user.id == topic.user_id %>
               <%= link_to "編集", edit_topic_path(topic) %>
               <%= link_to "削除", topic_path(topic), method: :delete %>
              <% end %>
+              <h4 class="topic-text">返信</h4>
+                 <p class="topic-text">
+                <% topic.comments.each do |comment| %>
+                  <p class="topic-text">
+                  <%= topic.user.name %>
+                  <%= comment.comment %>
+                  </p>
+                <% end %>
+              </p>
           </div>
         </div>  
       </div>
