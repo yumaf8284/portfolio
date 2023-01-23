@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
 
-  resources :topics
+  resources :topics do
+    resources :favorites, only: [:create, :destroy]
+  end 
+
 
   get 'comments/new'
   post '/comments', to: 'comments#create'

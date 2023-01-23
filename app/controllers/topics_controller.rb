@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
+    @topics = Topic.all.order(created_at: :desc)
   end
 
   def new

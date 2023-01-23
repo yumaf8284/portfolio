@@ -12,4 +12,5 @@ class User < ApplicationRecord
 
     has_many :comments
     has_many :comment_topics, through: :comments, source: 'topic'
+    has_many :favorites, dependent: :destroy
 end
