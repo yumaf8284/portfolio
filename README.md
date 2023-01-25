@@ -1,24 +1,20 @@
-# README
+# Game With
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+オンラインゲームのフレンド募集サイトです。<br>
+自分自身一人でゲームをやることが多く、気軽にプレイする<br>
+フレンドができたらと思い作成しました。
 
-Things you may want to cover:
 
-* Ruby version
+# 使用技術
+- Ruby 3.1.3
+- Ruby on Rails 6.1.7
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 機能一覧
+- ユーザー登録機能
+- ログイン機能
+- ログアウト機能
+- 投稿機能
+- 編集機能
+- 削除機能
+- いいね機能
+- コメント機能
