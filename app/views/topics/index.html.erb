@@ -17,8 +17,19 @@
              <%= image_tag 'comment.png', class: 'topic-index-icon' %>
              <%= topic.comment_users.count %>
             <% end %>
+
+            <% if !topic.favorite_users.include?(current_user) %>
+             <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+              <%= image_tag 'iine2.png', class: 'like-btn' %>
+             <% end %>
+            <% else %>
+             <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+              <%= image_tag 'iine.png', class: 'like-btn' %>
+             <% end %>
+            <% end %>
+
              <% if logged_in? && current_user.id == topic.user_id %>
-              <%= link_to "編集", edit_topic_path(topic) %>
+              <%= link_to "編集", edit_topic_path(topic), class: 'moji' %>
               <%= link_to "削除", topic_path(topic), method: :delete %>
              <% end %>
               <h4 class="topic-text">返信</h4>
@@ -29,11 +40,10 @@
                   <%= comment.comment %>
                   </p>
                 <% end %>
-              </p>
+                  </p>
           </div>
         </div>  
       </div>
     <% end %>
   </div>
-</div>  
 </div>

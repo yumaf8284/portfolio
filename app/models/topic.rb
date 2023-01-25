@@ -7,6 +7,8 @@ class Topic < ApplicationRecord
 
     has_many :comments
     has_many :comment_users, through: :comments, source: 'user'
-    has_many :favorites, dependent: :destroy
+    has_many :favorites
+    has_many :favorite_users, through: :favorites, source: 'user'
+    
 end
     

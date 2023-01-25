@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   before_action :baria_user, only: [:edit, :destroy, :update]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.all.includes(:favorite_users)
     @topics = Topic.all.order(created_at: :desc)
   end
 
