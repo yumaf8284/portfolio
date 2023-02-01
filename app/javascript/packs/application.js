@@ -16,7 +16,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 
-
-
 //= require bootstrap-sprockets
 //= require_tree .

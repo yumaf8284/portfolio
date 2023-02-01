@@ -17,8 +17,17 @@
 
  <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
+          <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
           <%= link_to 'Home', root_path,class: 'navbar-brand' %>
-        <ul class="nav navbar-nav navbar-right">
+        </div>
+        <ul  id="navbar" class="nav navbar-nav navbar-right navbar-collapse collapse" >
           <% if logged_in? %>
             <li>
              <%= link_to 'Post', new_topic_path , class: 'navi' %>
@@ -32,7 +41,6 @@
             <li>
             <%= link_to 'Logout', logout_path, method: :delete, class: 'navi'  %>
             </li>
-
           <% end %>
         </ul>
       </div>
