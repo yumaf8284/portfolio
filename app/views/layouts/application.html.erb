@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,43 +15,47 @@
    <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
   <% end %>
 
- <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+    <header class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
-          <div class="navbar-header">
 
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-expanded="false" aria-controls="navbarToggleExternalContent">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>
+          </button>
           <%= link_to 'Home', root_path,class: 'navbar-brand' %>
         </div>
-        <ul  id="navbar"  class="nav navbar-nav navbar-right navbar-collapse collapse" >
+        <ul id="navbarToggleExternalContent" class="nav navbar-nav navbar-right navbar-collapse collapse">
           <% if logged_in? %>
-            <li>
-             <%= link_to 'Post', new_topic_path , class: 'navi' %>
-            </li>
-            <li>
-               <%= link_to 'List', topics_path, class: 'navi' %>
-            </li>
-            <li>
-             <%= link_to 'Like', favorites_index_path , class: 'navi' %>
-            </li>
-            <li>
+          <li>
+            <%= link_to 'Post', new_topic_path , class: 'navi' %>
+          </li>
+          <li>
+            <%= link_to 'List', topics_path, class: 'navi' %>
+          </li>
+          <li>
+            <%= link_to 'Like', favorites_index_path , class: 'navi' %>
+          </li>
+          <li>
             <%= link_to 'Logout', logout_path, method: :delete, class: 'navi'  %>
-            </li>
+          </li>
           <% end %>
         </ul>
       </div>
-    </nav>
-
-
+    </header>
+    
     <%= yield %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
     <script>
-  $(function(){
-    $(".alert").fadeOut(5000);
-  });
-</script>
+
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+
+    </script> 
   </body>
 </html>
