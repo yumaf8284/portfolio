@@ -36,7 +36,7 @@
                  <p class="topic-text">
                 <% topic.comments.each do |comment| %>
                   <p class="topic-text">
-                  <%= topic.user.name %>
+                  <%= comment.user.name %>
                   <%= comment.comment %>
                   </p>
                 <% end %>

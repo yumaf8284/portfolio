@@ -11,6 +11,7 @@
 #
 default: &default
   adapter: mysql2
+  charset: utf8
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
@@ -20,6 +21,7 @@ default: &default
 development:
   <<: *default
   database: games_development
+  # database: games_production
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -51,5 +53,7 @@ test:
 production:
   <<: *default
   database: games_production
-  username: games
-  password: <%= ENV['GAMES_DATABASE_PASSWORD'] %>
+  username: root
+  password:
+  # username: games
+  # password: <%= ENV['GAMES_DATABASE_PASSWORD'] %>
